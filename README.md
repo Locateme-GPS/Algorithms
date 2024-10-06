@@ -1,3 +1,2 @@
-# ICPC
-ICPC preparations
-A beginning-to-end insight into my ICPC journey. 
+# Algorithms
+Just a collection of few algorithms that I found useful.
