@@ -84,7 +84,7 @@ Time complexity: O(nlogn)
 [Video](https://youtu.be/TzeBrDU-JaY?si=Vv2JxBvD2ow0Rryt)
 
 ## Code
-```cpp
+```py
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr  
