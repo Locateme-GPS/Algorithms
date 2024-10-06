@@ -1,8 +1,8 @@
 
-# Week 1
+# Algorithms
 Hey guys! This is my first week of practice:)
 
-## 1.Sieve of Eratosthenes:
+## 1. Sieve of Eratosthenes:
 This algorithm is used to find all prime numbers below a given number.
 Its time complexity is O(n*log(log(n))).
 
@@ -74,3 +74,49 @@ int main(){
     return 0;
 }
 ```
+
+## 3. Merge Sort
+The merge sort algorithm is more efficient than selection sort, insertion sort, and bubble sort which have a time complexity of O(n^2).
+Time complexity: O(nlogn)
+
+[Reading](https://www.geeksforgeeks.org/merge-sort/)
+
+[Video](https://youtu.be/TzeBrDU-JaY?si=Vv2JxBvD2ow0Rryt)
+
+## Code
+```cpp
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr  
+
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+
+    left = merge_sort(left)  
+    right = merge_sort(right)  
+
+    return merge(left, right)  
+
+def merge(left, right):
+    result = []
+    i = j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])  
+    result.extend(right[j:])  
+
+    return result
+
+l=[22,53,0,67,-4,83,-66]
+l=merge_sort(l)
+print(l)
+```
+
